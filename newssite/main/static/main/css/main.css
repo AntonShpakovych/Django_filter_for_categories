@@ -1,0 +1,27 @@
+body{
+    background-color: gray;
+}
+
+.card{
+    margin-top: 100px;
+    position: relative;
+}
+.btn{
+    position: absolute;
+    left: 5px;
+    bottom: 1px;
+}
+.card-text_cate{
+    padding-bottom: 5px;
+}
+.category{
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 20px;
+    width: 410px;
+    background: white;
+}
+.category a{
+    text-decoration: none;
+    color: black;
+}

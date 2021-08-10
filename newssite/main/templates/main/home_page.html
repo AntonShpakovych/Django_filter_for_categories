@@ -1,0 +1,30 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+<div class="category">
+  <h1>Поиск по категориям</h1>
+  {% for item in categories %}
+    <a class="a_category" href="/category/{{item.pk}}">{{item.title_category}}</a><br>
+  {% endfor %}
+</div>
+<div class="global_news">
+    <div class="row">
+    {% for news in news %}
+    <div class="col">
+        <div class="card" style="width: 18rem;
+                                height: 526px;">
+            <img class="card-img-top" src="{{news.news_img.url}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{news.title_news}}</h5>
+              <p class="card-text">{{news.full_text | truncatechars:255}}</p>
+              <p class="card-text_cate"><strong>Категория:</strong>{{news.category}}</p>
+              <a href="#" class="btn btn-primary">More details</a>
+            </div>
+          </div>
+    </div>
+  
+
+  {% endfor %}
+</div>
+</div>
+ {% endblock %}
